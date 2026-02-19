@@ -60,11 +60,17 @@ Generate a table of contents at the top of a post based on the titles in the pos
 
 ### Redirect www to root
 
-Redirect a custom domain blog with a `www` subdomain to the root domain. 
+Redirect a custom domain blog with a `www` subdomain to the root domain.
 
 [Code](/plugins/redirect-domain.js)
 
-*Note: This is best added to the `<head>` section instead of the `<footer>` section since it needs to execute immediately. 
+*Note: This is best added to the `<head>` section instead of the `<footer>` section since it needs to execute immediately.
+
+### Translate snippets
+
+Translates Bear Blog UI snippets (footer "Powered by" text, subscribe page, and upvote button labels) into another language. Defaults to Portuguese (pt-BR) — modify the replacement strings for your language.
+
+[Code](/plugins/translate-snippets.js)
 
 
 ## Dashboard
