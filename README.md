@@ -100,3 +100,13 @@ Count and display total posts and pages in the dashboard.
 Automatically ensures all lines have two spaces at the end, so Markdown will render new lines. Without two spaces at the end, text written on different lines (*without a blank line between them*) will render in your post as being on one line.
 
 [Code](/plugins/newline-fixer.js)
+
+### Ace editor
+
+Replaces the Bear Blog post editor with the Ace code editor, providing Markdown syntax highlighting and enhanced editing features.
+
+The plugin loads its dependencies automatically — no extra script tags needed.
+
+The [CSS](plugins/ace-editor/styles.css) file can optionally be added to your Dashboard Styles for a customised Solarized Dark theme with Markdown-aware styling.
+
+[Code](/plugins/ace-editor/ace-editor.js)
