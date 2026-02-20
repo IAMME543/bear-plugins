@@ -66,6 +66,12 @@ Redirect a custom domain blog with a `www` subdomain to the root domain.
 
 *Note: This is best added to the `<head>` section instead of the `<footer>` section since it needs to execute immediately.
 
+### Inline currency converter
+
+Converts inline currency amounts to a selected currency using live exchange rates. Add `<span class="currency" data-amount="100 USD">$100</span>` to your posts and a global dropdown will appear allowing readers to convert all amounts at once.
+
+[Code](/plugins/currency-converter.js)
+
 ### Translate snippets
 
 Translates Bear Blog UI snippets (footer "Powered by" text, subscribe page, and upvote button labels) into another language. Defaults to Portuguese (pt-BR) — modify the replacement strings for your language.
