@@ -1,43 +1,56 @@
-// Ensure you add the import for the Overtype library above this one
-// <script src="https://unpkg.com/overtype"></script>
+/*
+ Plugin name: Overtype Editor
+ Description: Replaces the Bear Blog post editor with the Overtype markdown editor, providing syntax highlighting and shortcuts for markdown features.
+ Author: Herman Martinus
+ Author URI: https://herman.bearblog.dev
+*/
 
-(document.readyState === "loading" 
-    ? document.addEventListener.bind(this,'DOMContentLoaded')  
-    : function(f){f();}.bind(this)
-).call(this,
-function() {
-    if ($textarea) {
-        $textarea.style.display = "none";
-        $uploadButton.style.display = "none"; // This is incompatible with the editor
+(function() {
+    'use strict';
 
-        if ($textarea) {
-            $overtypeDiv = document.createElement('div');
-            $overtypeDiv.className = 'overtype-editor';
-            $overtypeDiv.style.height = '700px';
-            $textarea.insertAdjacentElement('afterend', $overtypeDiv);
+    function loadScript(src, callback) {
+        var script = document.createElement('script');
+        script.src = src;
+        script.onload = callback;
+        document.head.appendChild(script);
+    }
+
+    function initOvertype() {
+        if (typeof $textarea === 'undefined' || !$textarea) return;
+
+        $textarea.style.display = 'none';
+
+        if (typeof $uploadButton !== 'undefined' && $uploadButton) {
+            $uploadButton.style.display = 'none';
         }
 
-        const OT = window.OverType.default || window.OverType;
-        // Initialize all toolbar editors
+        var overtypeDiv = document.createElement('div');
+        overtypeDiv.className = 'overtype-editor';
+        overtypeDiv.style.height = '700px';
+        $textarea.insertAdjacentElement('afterend', overtypeDiv);
+
+        var OT = window.OverType.default || window.OverType;
         new OT('.overtype-editor', {
             value: $textarea.value,
             toolbar: true,
             theme: 'cave',
             showStats: true,
             placeholder: '...',
-            onChange: (value, instance) => {
+            onChange: function(value) {
                 $textarea.value = value;
             }
         });
 
-        $overtypeTextarea = document.querySelector('.overtype-input');
-        
-        $overtypeTextarea.scrollTop = sessionStorage.getItem('overtypeEditorY') || 0
-        $overtypeTextarea.addEventListener("scroll", function(e){
-            sessionStorage.setItem('overtypeEditorY', $overtypeTextarea.scrollTop)
-        })
+        var overtypeTextarea = document.querySelector('.overtype-input');
+        if (overtypeTextarea) {
+            overtypeTextarea.scrollTop = sessionStorage.getItem('overtypeEditorY') || 0;
+            overtypeTextarea.addEventListener('scroll', function() {
+                sessionStorage.setItem('overtypeEditorY', overtypeTextarea.scrollTop);
+            });
+        }
     }
-});
 
-
-
+    loadScript('https://unpkg.com/overtype', function() {
+        initOvertype();
+    });
+})();

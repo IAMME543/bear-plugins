@@ -94,14 +94,6 @@ Expands the post and homepage content editor to the bottom of the screen.
 
 [Code](/plugins/full-height-editor.js)
 
-### Markdown editor
-
-Adds syntax highlighting and shortcuts for markdown features.
-
-[Code](/plugins/overtype.js)
-
-*Note: Overtype has been deprecated and it is instead suggested to use the [Markdown power-editor](https://fischr.org/markdown-power-editor-for-bear-blog/) by René.*
-
 ### Post counter
 
 Count and display total posts and pages in the dashboard.
@@ -113,6 +105,12 @@ Automatically ensures all lines have two spaces at the end, so Markdown will ren
 
 [Code](/plugins/newline-fixer.js)
 
+### Overtype editor
+
+Replaces the Bear Blog post editor with the Overtype markdown editor, providing syntax highlighting and shortcuts for markdown features.
+
+[Code](/plugins/overtype.js)
+
 ### Ace editor
 
 Replaces the Bear Blog post editor with the Ace code editor, providing Markdown syntax highlighting and enhanced editing features.
@@ -122,3 +120,8 @@ The plugin loads its dependencies automatically — no extra script tags needed.
 The [CSS](plugins/ace-editor/styles.css) file can optionally be added to your Dashboard Styles for a customised Solarized Dark theme with Markdown-aware styling.
 
 [Code](/plugins/ace-editor/ace-editor.js)
+
+
+### Markdown power-editor
+
+The [Markdown power-editor](https://fischr.org/markdown-power-editor-for-bear-blog/) by René is custom built for Bear and pretty neat.*
