@@ -58,6 +58,12 @@ Generate a table of contents at the top of a post based on the titles in the pos
 
 [Code](/plugins/table-of-contents.js)
 
+### Post tag links
+
+Display clickable tag links next to each post on the blog page, linking to filtered views.
+
+[Code](/plugins/post-tags.js)
+
 ### Redirect www to root
 
 Redirect a custom domain blog with a `www` subdomain to the root domain.
