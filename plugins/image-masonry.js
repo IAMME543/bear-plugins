@@ -117,7 +117,7 @@ Change the 4 values (owner, repo, folder, columnCount) or use data attributes in
                     columns[shortest].appendChild(img);
                     columnHeight[shortest] += img.naturalHeight;
 
-                    console.log("url: " + url + " shortest: " + shortest + " height: " + columnHeight[shortest])
+                    //console.log("url: " + url + " shortest: " + shortest + " height: " + columnHeight[shortest])
 
                     img.classList.add('loaded');
 
