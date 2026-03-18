@@ -84,6 +84,11 @@ Translates Bear Blog UI snippets (footer "Powered by" text, subscribe page, and 
 
 [Code](/plugins/translate-snippets.js)
 
+### Image Masonry
+
+Displays a Github repository of images in a masonry style gallery.
+
+[Code](/plugins/image-masonry.js)
 
 ## Dashboard
 These scripts can be added to [the footer of your dashboard](https://bearblog.dev/dashboard/customise/) in a `<script></script>` element.  
