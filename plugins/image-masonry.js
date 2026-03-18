@@ -6,6 +6,8 @@
  */
 
 /* USAGE
+It is recomended to manually compress images before storing on github as it makes everything load faster and reduces bandwidth usage.
+
 Change the first 4 values (owner, repo, folder, columnCount) or use data attributes in the src declaration as shown here:
 
 > <src data-owner="Github username" data-repo="Github repository name" data-folder="Repository folder name" data-columns="3"></src> 
