@@ -58,7 +58,7 @@ Change the 4 values (owner, repo, folder, columnCount) or use data attributes in
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 33.333%;
+    width:  ${100 / columnCount}%;
 }`;
 
     document.head.appendChild(style);
