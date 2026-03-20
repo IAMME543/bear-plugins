@@ -87,6 +87,7 @@ Translates Bear Blog UI snippets (footer "Powered by" text, subscribe page, and 
 ### Image Masonry
 
 Displays a Github repository of images in a masonry style gallery.
+*Requires Firefox 52+ or Chromium 55+*
 
 [Code](/plugins/image-masonry.js)
 
